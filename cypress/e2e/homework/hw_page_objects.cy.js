@@ -4,13 +4,10 @@ import { RegistrationPage } from "../../page_objects/eshop/registration_page";
 describe("HW page objects", () => {
   it("Home Page", () => {
     const eshop = new HomePage();
+    const registration = new RegistrationPage();
     eshop.openEshop();
     eshop.clickAccount();
     eshop.clickRegistration();
-  });
-  it("Registration Page", () => {
-    const registration = new RegistrationPage();
-    registration.openRegistrationPage();
     registration.typeFirstName("Eva");
     registration.typeSecondName("Štifterová");
     registration.typeEmail("stifterova.eva+1@gmail.com");
