@@ -2,7 +2,7 @@ import { HomePage } from "../../page_objects/eshop/home_page";
 import { RegistrationPage } from "../../page_objects/eshop/registration_page";
 
 describe("HW page objects", () => {
-  it("Home Page", () => {
+  it("Registration", () => {
     const eshop = new HomePage();
     const registration = new RegistrationPage();
     eshop.openEshop();
@@ -17,7 +17,8 @@ describe("HW page objects", () => {
     registration.clickConfirm();
   });
 });
-it("Tento test se ukončí bez chyby", function () {
+
+it("skip", function () {
   this.skip();
   cy.get("#input-firstname").type("Eva");
 });
