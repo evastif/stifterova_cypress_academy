@@ -1,19 +1,24 @@
-import { HeaderSection } from "./common/header_section";
-import { LoginPage } from "./login_page";
+import { LoginPage } from "./login_page.js";
+import { ProjectsPage } from "./projects_page.js";
 
-export class DashboardPage extends HeaderSection {
+export class DashboardPage {
   constructor() {
-    super();
-    /*this.dropdownButton = "#user_dropdown";
+    this.profileButton = "#user_dropdown";
     this.logoutButton = "#logout";
+    this.projectLink = "#Projects";
   }
 
-  clickUserDrop() {
-    cy.get(this.dropdownButton).click();     TOTO NAHRADÍ HEADER SECTION
+  clickProfile() {
+    cy.get(this.profileButton).click();
     return this;
   }
+
   clickLogout() {
     cy.get(this.logoutButton).click();
-    return new LoginPage();*/
+    return new LoginPage();
+  }
+  clickProjectLink() {
+    cy.get(this.projectLink).click();
+    return new ProjectsPage();
   }
 }
