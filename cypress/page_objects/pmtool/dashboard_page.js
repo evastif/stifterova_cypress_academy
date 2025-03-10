@@ -16,4 +16,7 @@ export class DashboardPage extends HeaderSection {
     cy.get(this.logoutButton).click();
     return new LoginPage();*/
   }
+    clickProfile() {
+    cy.get(this.profileButton).click();
+    return this;
 }
