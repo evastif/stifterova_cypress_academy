@@ -1,17 +1,19 @@
+import { HeaderSection } from "./common/header_section";
 import { LoginPage } from "./login_page";
 
-export class DashboardPage {
+export class DashboardPage extends HeaderSection {
   constructor() {
-    this.dropdownButton = "#user_dropdown";
+    super();
+    /*this.dropdownButton = "#user_dropdown";
     this.logoutButton = "#logout";
   }
 
   clickUserDrop() {
-    cy.get(this.dropdownButton).click();
+    cy.get(this.dropdownButton).click();     TOTO NAHRADÍ HEADER SECTION
     return this;
   }
   clickLogout() {
     cy.get(this.logoutButton).click();
-    return new LoginPage();
+    return new LoginPage();*/
   }
 }
