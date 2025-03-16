@@ -1,4 +1,4 @@
-import { LoginPage } from "../../page-objects/pmtool/login_page.js";
+import { LoginPage } from "../../page_objects/pmtool/login_page.js";
 
 describe("Login Page Tests with Asserts", () => {
   beforeEach(() => {
