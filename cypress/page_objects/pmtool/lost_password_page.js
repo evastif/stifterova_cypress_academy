@@ -1,20 +1,13 @@
+import { BasePage } from "./common/base_page";
 import { LoginPage } from "./login_page";
-export class LostPasswordPage {
+
+export class LostPasswordPage extends BasePage {
   constructor() {
+    super("module=users/restore_password");
     this.usernameInput = ":nth-child(2) > .input-icon > .form-control";
     this.emailInput = ":nth-child(3) > .input-icon > .form-control";
-    this.sendButton = "[type='submit']";
-    this.backButton = "#back-btn > .fa";
-  }
-
-  openPmtool() {
-    cy.visit(this.pmtoolUrl);
-    return this;
-  }
-
-  clickForgetPasswordButton() {
-    cy.get(this.forgetPasswordButton).click;
-    return new LostPasswordPage();
+    this.backButton = "#back-btn";
+    this.submitButton = ".btn-info";
   }
 
   typeUsername(username) {
@@ -27,13 +20,13 @@ export class LostPasswordPage {
     return this;
   }
 
-  clickSandButton() {
-    cy.get(this.sendButton).click();
+  clickBack() {
+    cy.get(this.backButton).click();
     return new LoginPage();
   }
 
-  clickBackButton() {
-    cy.get(this.backButton).click();
+  clickSubmit() {
+    cy.get(this.submitButton).click();
     return new LoginPage();
   }
 }
