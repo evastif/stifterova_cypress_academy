@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     watchForFileChanges: false,
     chromeWebSecurity: false,
+    baseUrl: "https://tredgate.com/pmtool",
   },
 });
