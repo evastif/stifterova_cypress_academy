@@ -1,3 +1,5 @@
+import { RegisterPage } from "./register_page";
+
 export class RegistrLoginPage {
   constructor() {
     this.registerAcount = "button[title='Continue']";
@@ -5,6 +7,6 @@ export class RegistrLoginPage {
 
   clickRegisterAcount() {
     cy.get(this.registerAcount).click();
-    return this;
+    return new RegisterPage();
   }
 }
