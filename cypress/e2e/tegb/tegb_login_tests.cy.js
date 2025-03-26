@@ -1,4 +1,4 @@
-import { TegBLoginPage } from "../../page_objects/tegb/tegb_login_page.js";
+import { TegBLoginPage } from "../../page-objects/tegb/tegb_login_page.js";
 
 describe("TEGB Login Tests", () => {
   beforeEach(() => {
