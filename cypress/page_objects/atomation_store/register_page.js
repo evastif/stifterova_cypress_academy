@@ -38,38 +38,38 @@ export class RegisterPage {
     return this;
   }
 
-  typePhone() {
-    cy.get(this.phone).type(777777777);
+  typePhone(phoneNumber) {
+    cy.get(this.phone).type(phoneNumber);
     return this;
   }
 
-  typeFax() {
-    cy.get(this.fax).type(777777777);
+  typeFax(faxNumber) {
+    cy.get(this.fax).type(faxNumber);
     return this;
   }
 
-  typeCompany() {
-    cy.get(this.company).type("Malá s.r.o.");
+  typeCompany(companyName) {
+    cy.get(this.company).type(companyName);
     return this;
   }
 
-  typeAddress() {
-    cy.get(this.address).type("Krátká 22");
+  typeAddress(address) {
+    cy.get(this.address).type(address);
     return this;
   }
 
-  typeCity() {
-    cy.get(this.city).type("Dlouhá Ves");
+  typeCity(city) {
+    cy.get(this.city).type(city);
     return this;
   }
 
-  typePostcode() {
-    cy.get(this.postecode).type("36000");
+  typePostcode(postecode) {
+    cy.get(this.postecode).type(postecode);
     return this;
   }
 
-  typeCountry() {
-    cy.get(this.country).select("Czech Republic");
+  typeCountry(country) {
+    cy.get(this.country).select(country);
     return this;
   }
 
@@ -78,8 +78,8 @@ export class RegisterPage {
     return this;
   }
 
-  selectZone() {
-    cy.get(this.zone).select("Vysocina");
+  selectZone(zone) {
+    cy.get(this.zone).select(zone);
     return this;
   }
 
@@ -113,10 +113,7 @@ export class RegisterPage {
     return this;
   }
 
-  getConfirmText() {
-    cy.get(".maintext").should(
-      "contains.text",
-      "Your Account Has Been Created!"
-    );
+  getConfirmText(confirmText) {
+    cy.get(".maintext").should("contains.text", confirmText);
   }
 }
