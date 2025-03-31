@@ -1,5 +1,5 @@
 import { customElement } from "../../helpers/custom_element.js";
-import { DashboardPage } from "./tegb_dashboardPage.js";
+import { DashboardPage } from "./dashboard_page.js";
 
 export class TegBLoginPage {
   constructor() {
@@ -7,8 +7,7 @@ export class TegBLoginPage {
     this.usernameInput = customElement("input[data-testid='username']");
     this.passwordInput = customElement("input[data-testid='password']");
     this.loginButton = customElement("button[data-testid='log_in']");
-    this.tegbUrl = Cypress.env("tegb_url");
-    cy.intercept("/auth/login").as("login_api");
+    cy.intercept("/auth/login").as("tegb_login_api");
   }
 
   openTegb() {
@@ -28,8 +27,7 @@ export class TegBLoginPage {
 
   clickLogin() {
     this.loginButton.click();
-    //TODO Add correct return object after it is implemented
-    cy.wait("@login_api");
+    cy.wait("@tegb_login_api");
     return new DashboardPage();
   }
 }
