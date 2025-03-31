@@ -1,12 +1,12 @@
-import { customElement } from "../../helpers/custom_element";
+import { customElement } from "../../helpers/custom_element.js";
 
 export class AccountsPage {
   constructor() {
-    this.pageTitle = customElement('[data-testid="title"]');
+    this.pageTitle = customElement('h1[data-testid="title"]');
   }
 
-  titleHaveText(text) {
-    this.pageTitle.haveText(text);
+  titleHaveText(titleText) {
+    this.pageTitle.haveText(titleText);
     return this;
   }
 }
