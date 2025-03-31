@@ -1,5 +1,5 @@
 import { customElement } from "../../helpers/custom_element.js";
-import { DashboardPage } from "./dashboard_page.js";
+import { DashboardPage } from "./tegb_dashboardPage.js";
 
 export class TegBLoginPage {
   constructor() {

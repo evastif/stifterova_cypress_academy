@@ -1,4 +1,4 @@
-import { customElement } from "../../helpers/custom_element.js";
+import { customElement } from "../../helpers/custom_element";
 
 export class AccountsPage {
   constructor() {
